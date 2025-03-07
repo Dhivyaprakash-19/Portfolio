@@ -1,0 +1,1106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>My-portfolio</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Edu+TAS+Beginner:wght@400..700&family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link rel="stylesheet" href="lib/animate/animate.min.css"/>
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar Start -->
+        <div class="container-fluid nav-section border-0">
+            <nav class="navbar navbar-light">
+                <div class="navbar-nav flex-column">
+                    <a href="#pigraHome" class="nav-item nav-link active"><span class="fa fa-home"></span> Home</a>
+                    <a href="#pigraService" class="nav-item nav-link"><span class="fab fa-servicestack"></span> Skills</a>
+                    <a href="#pigraContact" class="nav-item nav-link"><span class="fas fa-address-book"></span> Contact</a>
+                </div>
+            </nav>
+        </div>
+        <!-- Navbar End -->
+
+        <!-- Header End -->
+
+
+        <!-- About Start -->
+        <div class="container-fluid" id="pigraAbout">
+            <div class="container"> 
+                <div class="row g-0">
+                    <div class="col-12 col-lg-3">
+                        <div class="about-header bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">About Me</p>
+                                <h1 id="typed-text" class="display-6 text-white mb-0"></h1>
+
+                                <script>
+                                    const texts = [
+                                        "Machine Learning Engineer ",
+                                        "Web Developer ",
+                                        "Data Analyst ",
+                                        "Sports Enthusiast ",
+                                    ];
+                                
+                                    let textIndex = 0;
+                                    let charIndex = 0;
+                                    let isDeleting = false;
+                                    const typedElement = document.getElementById("typed-text");
+                                
+                                    function typeEffect() {
+                                        let currentText = texts[textIndex];
+                                        if (isDeleting) {
+                                            typedElement.innerHTML = currentText.substring(0, charIndex--);
+                                        } else {
+                                            typedElement.innerHTML = currentText.substring(0, charIndex++);
+                                        }
+                                
+                                        let speed = isDeleting ? 50 : 100; // Typing speed
+                                        if (!isDeleting && charIndex === currentText.length) {
+                                            speed = 1500; // Pause before deleting
+                                            isDeleting = true;
+                                        } else if (isDeleting && charIndex === 0) {
+                                            isDeleting = false;
+                                            textIndex = (textIndex + 1) % texts.length; // Loop through texts
+                                            speed = 500; // Pause before typing next text
+                                        }
+                                
+                                        setTimeout(typeEffect, speed);
+                                    }
+                                
+                                    typeEffect(); // Start typing effect
+                                </script>
+                                                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-9">
+                        <div class="about-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-5">
+                                <div class="col-xl-5">
+                                    <div class="about-img bg-light p-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        <img src="img/It's Me.jpg" class="img-fluid w-100" alt="Image">
+                                        <div class="sosial-icon">
+                                            <a class="btn btn-primary btn-sm-square mb-3" href="https://github.com/Dhivyaprakash-19"><i class="fab fa-github text-white"></i></a>
+                                            <a class="btn btn-primary btn-sm-square mb-3" href="https://leetcode.com/u/dhivyaprakash192/" target="_blank">
+                                                <i class="fas fa-code text-white"></i>
+                                            </a>
+                                                                                        <a class="btn btn-primary btn-sm-square mb-0" href="https://www.linkedin.com/in/dhivya-prakash-2b6399259/"><i class="fab fa-linkedin-in text-white"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
+                                    <h4 class="mb-4">Hello, I'm Dhivyaprakash</h4>
+                                    <p class="mb-4">Passionate tech enthusiast skilled in AI & ML, and full-stack development, eager to apply data-driven solutions to real-world challenges, to innovate and grow in a dynamic environment professional.
+                                    </p>
+                                    <div class="row g-4 mb-4">
+                                        <div class="col-6">
+                                            <p><strong class="fw-bold text-dark">Phone :</strong>   +91 96002 38224</p>
+                                            <p class="mb-0"><strong class="fw-bold text-dark">Address :</strong>
+                                                6/690,Gandhinagar
+                                                Ganeshapuram,Coimbatore</p>
+                                        </div>
+                                        <div class="col-6">
+                                            <p><strong class="fw-bold text-dark">Nationality :</strong> 
+                                                India</p>
+                                            <p><strong class="fw-bold text-dark">Email :</strong> dhivyaprakash192@gmail.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex">
+                                        
+                                        <a class="btn btn-primary btn-sm-square me-3" href="https://github.com/Dhivyaprakash-19"><i class="fab fa-github text-white"></i></a>
+                                        <a class="btn btn-primary btn-sm-square me-3" href="https://www.linkedin.com/in/dhivya-prakash-2b6399259/"><i class="fab fa-linkedin-in text-white"></i></a>
+                                        <a class="btn btn-primary btn-sm-square me-3" href="https://leetcode.com/u/dhivyaprakash192/"><i class="fas fa-code text-white"></i></a>
+
+                                    </div>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- About End -->
+
+
+        <!-- Education Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="education-header bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Education</p>
+                                <h1 class="display-6 text-white mb-0">My education qualification</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="education-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <p class="fs-5 mb-0 me-4">Kongu Engineering College | B.Tech</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> Perundurai | 638 052
+                                            </div>
+                                        </div>
+                                        <p class="fs-5 mb-0 me-4">Artificial Intelligence & Machine Learning</p>
+                                        <p class="mb-0">As an AI/ML enthusiast, I have a strong foundation in building intelligent systems that can learn and adapt.
+                                            I am passionate about leveraging AI to solve real-world challenges, from predictive analytics to intelligent automation.<p>Cumulative CGPA : 7.51/10 (till 5th semester).</p>
+                                        </p>
+                                    </div>
+                                </div>
+                                <style>
+                                    /* Initial state of education item */
+                                    .education-item {
+                                        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+                                    }
+                                
+                                    /* Enlarge and add shadow effect on hover */
+                                    .education-item:hover {
+                                        transform: scale(1.05); /* Slightly enlarge by 5% */
+                                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow to make the effect stand out */
+                                    }
+                                </style>
+                                
+                                <div class="col-12">
+                                    <div class="education-item rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="d-flex align-items-center mb-3">
+                                            <p class="fs-5 mb-0 me-4">Vijayalakshmi Matric.Hr.Sec.School</p>
+                                            <div>
+                                                <span class="fa fa-calendar me-1"></span> Coimbatore | 641 302
+                                            </div>
+                                        </div>
+                
+                                        <p class="mb-0">Completed my schooling at Vijayalakshmi Matric Hr Sec School, where I developed a strong academic background. My interest in technology and innovation has driven me to explore the field of AI/ML, aiming to build intelligent and data-driven solutions.
+                                        </p>
+                                        <br>
+                                        <p>HSC : 92.1%  |     SSLC : 67.2%</p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Education End -->
+
+        <!-- Experience Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="experience-header bg-dark h-100 pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <p class="text-white sub-title">Projects</p>
+                                <h1 class="display-6 text-white mb-0">My works</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="experience-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp hover-effect" data-wow-delay="0.1s">
+                                        <div class="d-flex align-items-center mb-3"></div>
+                                        <h4 class="mb-3">Simple Book Store</h4>
+                                        <p class="mb-0">
+                                            The Online Book Store is a full-stack web application that allows users to browse, search, and purchase books effortlessly. Built using the MERN stack, the platform provides an intuitive and responsive user experience for book lovers.
+                                        </p>
+                                        <br>
+                                        <p>Technologies : React, Node.js, MongoDB, Express.js</p>
+                                    </div>
+                                </div>
+                                
+                                <style>
+                                    .hover-effect {
+                                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                    }
+                                
+                                    .hover-effect:hover {
+                                        transform: scale(1.05);
+                                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                                    }
+                                </style>
+                                
+                                <div class="col-12">
+                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp hover-effect" data-wow-delay="0.3s">
+                                        <div class="d-flex align-items-center mb-3"></div>
+                                        <h4 class="mb-3">Hairstyle Recommendation using Face Shape</h4>
+                                        <p class="mb-0">
+                                            This real-time Hairstyle Recommendation System uses face shape analysis to suggest the most suitable hairstyles for users. By leveraging computer vision and facial landmark detection, the system accurately identifies key facial features and classifies face shapes to generate personalized hairstyle recommendations.
+                                        </p>
+                                        <br>
+                                        <p>Technologies: OpenCV, Dlib (68-point facial landmark).</p>
+                                    </div>
+                                </div>
+                                
+                                <style>
+                                    .hover-effect {
+                                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                    }
+                                
+                                    .hover-effect:hover {
+                                        transform: scale(1.05);
+                                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                                    }
+                                </style>
+                                
+                                <div class="col-12">
+                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp hover-effect" data-wow-delay="0.5s">
+                                        <div class="d-flex align-items-center mb-3"></div>
+                                        <h4 class="mb-3">Movie Recommendation using ML Algorithm</h4>
+                                        <p class="mb-0">
+                                            This Movie Recommendation System leverages machine learning algorithms to analyze user preferences and suggest movies accordingly. By using a combination of content-based filtering and collaborative filtering, the system delivers highly personalized recommendations, enhancing the user experience. The Cosine Similarity metric is used to determine movie similarities, while data is fetched dynamically from the TMDB API for an updated movie database.
+                                        </p>
+                                        <br>
+                                        <p>Technologies: Python, Cosine Similarity, TMDB API.</p>
+                                    </div>
+                                </div>
+                                
+                                <style>
+                                    .hover-effect {
+                                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                    }
+                                
+                                    .hover-effect:hover {
+                                        transform: scale(1.05);
+                                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                                    }
+                                </style>
+                                
+                                <div class="col-12">
+                                    <div class="experience-item rounded p-4 h-100 wow fadeInUp hover-effect" data-wow-delay="0.5s">
+                                        <div class="d-flex align-items-center mb-3"></div>
+                                        <h4 class="mb-3">Stock Market Analysis</h4>
+                                        <p class="mb-0">
+                                            This Stock Market Analysis project leverages Power BI to visualize and analyze financial data. By utilizing interactive dashboards, the system helps in tracking stock trends, comparing company performances, and identifying market patterns. The project enables data-driven decision-making by presenting real-time insights with charts, graphs, and key performance indicators (KPIs).
+                                        </p>
+                                        <br>
+                                        <p>Technology: Power BI</p>
+                                    </div>
+                                </div>
+                                
+                                <style>
+                                    .hover-effect {
+                                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                                    }
+                                
+                                    .hover-effect:hover {
+                                        transform: scale(1.05);
+                                        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+                                    }
+                                </style>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Exparience End -->
+
+
+        <!-- Skills Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="skills-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <h1 class="display-6 text-white mb-0">Areas of interest</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="skills-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="text-primary text-center mb-3">
+                                            <i class="fab fa-html5 fa-3x"></i>
+                                        </div>
+                                        
+                                                                                <div class="counter-counting d-flex justify-content-center">
+                                            
+                                        </div>
+                                        <h4 class="mb-0">Frontend</h4>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="text-primary text-center mb-3">
+                                            <i class="fas fa-brain fa-3x"></i>
+                                        </div>
+                                                                                <div class="counter-counting d-flex justify-content-center">
+                                            
+                                        </div>
+                                        <h4 class="mb-0">Machine Learning</h4>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="text-primary text-center mb-3">
+                                            <i class="fas fa-chart-bar fa-3x"></i>
+                                        </div>
+                                                                                <div class="counter-counting d-flex justify-content-center">
+                                            
+                                        </div>
+                                        <h4 class="mb-0">Data Analysis</h4>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.7s">
+                                        <div class="text-primary text-center mb-3">
+                                            <i class="fas fa-database fa-3x"></i>
+                                        </div>
+                                                                                <div class="counter-counting d-flex justify-content-center">
+                                            
+                                        </div>
+                                        <h4 class="mb-0"> Database Management</h4>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="text-primary text-center mb-3">
+                                            <i class="fas fa-eye fa-3x"></i>
+                                        </div>
+                                                                                <div class="counter-counting d-flex justify-content-center">
+                                            
+                                        </div>
+                                        <h4 class="mb-0">Computer Vision</h4>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4 col-lg-4 col-xl-3">
+                                    <div class="skills-item text-center rounded p-4 h-100 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="text-primary text-center mb-3">
+                                            <i class="fas fa-code fa-3x"></i>
+                                        </div>
+                                        
+                                                                                <div class="counter-counting d-flex justify-content-center">
+                                           
+                                        </div>
+                                        <h4 class="mb-0">Web Scrapping</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skills End -->
+
+
+        <!-- Service Start -->
+        <div class="container-fluid" id="pigraService">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="service-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <h1 class="display-6 text-white mb-0">Skills</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="service-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2">
+                                                <i class="fas fa-laptop-code fa-3x"></i>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <a href="#" class="h4 mb-0">Languages</a>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <p class="mb-0">Proficient in Java, JavaScript, and SQL for building dynamic applications, interactive web solutions, and efficient databases
+                                                </p>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <p><i class="fa fa-check me-2"></i> JAVA</p>
+                                                <p><i class="fa fa-check me-2"></i> Javascript</p>
+                                                <p class="mb-0"><i class="fa fa-check me-2"></i> SQL</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2">
+                                                <i class="fas fa-tools fa-3x"></i>  <!-- Represents general tools -->
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <a href="#" class="h4 mb-0">Software tools</a>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <p class="mb-0">I efficiently use GitHub for version control and collaboration, ensuring smooth project management. VS Code, Colab, and Jupyter aid in seamless coding, debugging, and AI/ML model development. Power BI and ChatGPT help in data visualization, analysis, and AI-driven insights
+                                                </p>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <p><i class="fa fa-check me-2"></i> GitHub</p>
+                                                <p><i class="fa fa-check me-2"></i> VS code </p>
+                                                <p><i class="fa fa-check me-2"></i> PowerBI</p>
+                                                <p><i class="fa fa-check me-2"></i> ChatGPT</p>
+                                                <p><i class="fa fa-check me-2"></i> Colab</p>  
+                                                <p><i class="fa fa-check me-2"></i> Jupyter</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2">
+                                                <i class="fas fa-layer-group fa-3x"></i>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <a href="#" class="h4 mb-0">Frameworks</a>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <p class="mb-0">I use ReactJS for building dynamic UIs, Bootstrap for responsive design, and Tailwind CSS for fast, utility-first styling
+                                                </p>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <p><i class="fa fa-check me-2"></i> ReactJS</p>
+                                                <p><i class="fa fa-check me-2"></i> Bootstrap</p>
+                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Tailwind</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="service-item p-4 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="row g-4 align-items-center">
+                                            <div class="col-xl-2">
+                                                <i class="fas fa-user-tie fa-3x"></i>  <!-- Represents professionalism and communication -->
+                                           </div>
+                                            <div class="col-xl-3">
+                                                <a href="#" class="h4 mb-0">Soft skills</a>
+                                            </div>
+                                            <div class="col-xl-4">
+                                                <p class="mb-0">I excel in teamwork, leadership, and communication, ensuring collaboration, guidance, and clarity in projects
+                                                </p>
+                                            </div>
+                                            <div class="col-xl-3">
+                                                <p><i class="fa fa-check me-2"></i> Teamwork</p>
+                                                <p><i class="fa fa-check me-2"></i> Leadership</p>
+                                                <p class="mb-0"><i class="fa fa-check me-2"></i> Communication</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Service End -->
+
+
+        <!-- Portfolio Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="portfolio-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <h1 class="display-6 text-white mb-0">Hackthons<p>& Intern</p></h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="portfolio-content h-100 pt-6 ps-6 pb-6">
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <h1 class="display-6 mb-0">St Joseph's college|Chennai</h1>
+                                        <h4 class="text-body">24 hrs hackthon|Live threat detection</h4>
+                                                                             
+                                    </div>
+                                    <div class="col-9 col-xl-4">
+                                        <div class="portfolio-img">
+                                            <div class="portfolio-img-inner">
+                                                <img src="img/HAC.jpg" class="img-fluid" alt="Image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-2">
+                                        <div class="view-img">
+                                            <a href="img/HAC.jpg" class="btn btn-primary btn-lg-square"  data-lightbox="Portfolio-1"><i class="fas fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="portfolio-item py-5 border-bottom wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="row g-4 align-items-center">
+                                    <div class="col-xl-6">
+                                        <h1 class="display-6 mb-0">ACmegrade</h1>
+                                        <h4 class="text-body">Performed internship on Machine Learning</h4>
+                                        <div>
+                                            <span class="fa fa-calendar me-1"></span> 2023
+                                        </div>   
+                                    </div>
+                                    
+                                    <div class="col-9 col-xl-4">
+                                        <div class="portfolio-img">
+                                            <div class="portfolio-img-inner">
+                                                <img src="img/AC.jpeg" class="img-fluid" alt="Image">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3 col-xl-2">
+                                        <div class="view-img">
+                                            <a href="img/AC.jpg" class="btn btn-primary btn-lg-square"  data-lightbox="portfolio-2"><i class="fas fa-plus"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio End -->
+
+
+        <!-- Blog Start -->
+        <div class="container-fluid" id="pigraBlog">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="blog-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                    
+                                <h1 class="display-6 text-white mb-0">Papers Presented & Workshop</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="blog-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4">
+                                <div class="col-xl-6">
+                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.1s">
+                                        <div class="row g-4">
+                                            <div class="col-4">
+                                                <div class="blog-item-img bg-dark h-100">
+                                                    <a href="#">
+                                                        <img src="img/blog-1.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="h-100">
+                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> September 12, 2023</p>
+                                                    <a href="#" class="d-inline-block h4 mb-4">To-Do-List</a>
+                                                    <p>Presented a To-Do List Application at Kongu College, showcasing task management features with efficient CRUD operations and a user-friendly interface</p>
+                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
+                                                        <p class="mb-0 text-body"><a href="#" class="h6">KEC Erode</a></p>
+                                                        <p class="mb-0 text-body"><a href="#" class="h6"></a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.3s">
+                                        <div class="row g-4">
+                                            <div class="col-4">
+                                                <div class="blog-item-img bg-dark h-100">
+                                                    <a href="#">
+                                                        <img src="img/blog-2.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="h-100">
+                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> October 6, 2023</p>
+                                                    <a href="#" class="d-inline-block h4 mb-4">Chat-bot for Mining Sector</a>
+                                                    <p>Presented a Chatbot for the Mining Sector at BIT College, leveraging AI to provide real-time assistance and safety insights for mining operations</p>
+                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
+                                                        <p class="mb-0 text-body"><a href="#" class="h6">BIT Erode</a></p>
+                                                        <p class="mb-0 text-body"><a href="#" class="h6"></a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xl-6">
+                                    <div class="blog-item wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="row g-4">
+                                            <div class="col-4">
+                                                <div class="blog-item-img bg-dark h-100">
+                                                    <a href="#">
+                                                        <img src="img/blog-3.jpg" class="img-fluid w-100 h-100" style="object-fit: cover;" alt="Image">
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <div class="col-8">
+                                                <div class="h-100">
+                                                    <p class="text-body mb-3"><i class="fa fa-calendar-alt me-2"></i> October 7, 2023</p>
+                                                    <a href="#" class="d-inline-block h4 mb-4">Workshop on Machine Learning</a>
+                                                    <p>Attended a Machine Learning Workshop at BIT College, gaining hands-on experience in ML algorithms, data processing, and model building</p>
+                                                    <div class="py-2 px-3 bg-light d-flex justify-content-between">
+                                                        <p class="mb-0 text-body"> <a href="#" class="h6">BIT Erode</a></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               
+                                <div class="col-12 wow fadeInUp" data-wow-delay="0.9s">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Blog End -->
+
+        
+        <!-- Testimonial Start -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="testimonial-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <h1 class="display-6 text-white mb-0">Achievements</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="testimonial-content h-100 pt-6 ps-6 pb-6">
+                            <div class="testimonial-carousel owl-carousel bg-light wow fadeInUp" data-wow-delay="0.1s">
+                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/CERTI.jpg' alt=''>">
+                                    <div class="row gy-4 gx-2 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex justify-content-sm-end">
+                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
+                                                    <img src="img/CERTI.jpg" class="img-fluid" style="object-fit: cover;" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <h5 class="mb-2">'A' Certificate Exam</h5>
+                                                <p class="mb-0">Coimbatore</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm-center">
+                                        <p>I completed the NCC C Certificate exam with an A grade and achieved the Sergeant Rank. NCC instills discipline, leadership, and a sense of responsibility, shaping individuals for future challenges. The training and experience gained through NCC provide valuable career and personal growth opportunities.
+                                        </p>
+                                        <i class="fas fa-star text-primary">Zoom to preview</i>
+
+                                    </div>
+                                </div>
+                      <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/CAMP.jpg' alt=''>">
+                        <div class="row gy-4 gx-2 mb-4">
+                            <div class="col-sm-6">
+                                <div class="d-flex justify-content-sm-end">
+                                    <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
+                                        <img src="img/CAMP.jpg" class="img-fluid" style="object-fit: cover;" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5 class="mb-2">Camp</h5>
+                                    <p class="mb-0">Hindusthan College</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-sm-center">
+                            <p>I attended an NCC camp at Hindustan College, an experience that tested endurance, teamwork, and discipline. Facing physical challenges, strict routines, and leadership tasks, I learned resilience and adaptability. Such struggles shape character, teaching valuable life lessons that prepare us for future challenges.
+                            </p>
+                            <div class="d-flex justify-content-sm-center">
+                                <i class="fas fa-star text-primary">Zoom to preview</i>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/BL.jpg' alt=''>">
+                                    <div class="row gy-4 gx-2 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex justify-content-sm-end">
+                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
+<!-- Clickable Image -->
+                                                        <img src="img/BL.jpg" class="img-fluid preview-image" 
+                                                            style="object-fit: cover; cursor: pointer; max-width: 300px;" alt="">
+
+                                                        <!-- Modal for Preview -->
+                                                        <div id="imageModal" class="modal">
+                                                            <span class="close" onclick="closePreview()">&times;</span>
+                                                            <img class="modal-content" id="fullImage">
+                                                        </div>
+
+                                                        <style>
+                                                            /* Modal Styling */
+                                                            .modal {
+                                                                display: none; 
+                                                                position: fixed;
+                                                                z-index: 1000;
+                                                                left: 0;
+                                                                top: 0;
+                                                                width: 100%;
+                                                                height: 100%;
+                                                                background-color: rgba(0, 0, 0, 0.8);
+                                                                justify-content: center;
+                                                                align-items: center;
+                                                            }
+
+                                                            .modal-content {
+                                                                max-width: 90%;
+                                                                max-height: 90%;
+                                                                display: block;
+                                                                margin: auto;
+                                                                border-radius: 10px;
+                                                            }
+
+                                                            .close {
+                                                                position: absolute;
+                                                                top: 10px;
+                                                                right: 20px;
+                                                                font-size: 40px;
+                                                                color: white;
+                                                                cursor: pointer;
+                                                            }
+                                                        </style>
+
+                                                        <script>
+                                                            // Open Image Preview
+                                                            document.querySelector('.preview-image').addEventListener('click', function () {
+                                                                document.getElementById('fullImage').src = this.src;
+                                                                document.getElementById('imageModal').style.display = "flex";
+                                                            });
+
+                                                            // Close Preview
+                                                            function closePreview() {
+                                                                document.getElementById('imageModal').style.display = "none";
+                                                            }
+                                                        </script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <h5 class="mb-2">Blood Donation</h5>
+                                                <p class="mb-0">Erode</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm-center">
+                                        <p>I recently donated blood in Erode, a small act that can save lives. Blood donation is a simple yet powerful way to help accident victims, patients in surgeries, and those in need. A single donation can save up to three lives. If you're eligible, consider donating—your kindness can make a huge difference!
+                                        </p>
+                                        <i class="fas fa-star text-primary">Zoom to preview</i>
+
+                                    </div>
+                                </div>
+                                
+                                <div class="testimonial-item" data-dot="<img class='img-fluid' src='img/newbd.jpg' alt=''>">
+                                    <div class="row gy-4 gx-2 mb-4">
+                                        <div class="col-sm-6">
+                                            <div class="d-flex justify-content-sm-end">
+                                                <div class="testimonial-inner-img border border-primary border-3 me-4" style="width: 100px; height: 100px;">
+<!-- Clickable Image -->
+<img src="img/newbd.jpg" class="img-fluid preview-image" 
+     style="object-fit: cover; cursor: pointer; max-width: 500px;" alt="">
+
+<!-- Modal for Preview -->
+
+
+<style>
+    /* Modal Styling */
+    .modal {
+        display: none; 
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        max-width: 90%;
+        max-height: 90%;
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+    }
+
+    .close {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        font-size: 40px;
+        color: white;
+        cursor: pointer;
+    }
+</style>
+
+<script>
+    // Open Image Preview
+    document.querySelector('.preview-image').addEventListener('click', function () {
+        document.getElementById('fullImage').src = this.src;
+        document.getElementById('imageModal').style.display = "flex";
+    });
+
+    // Close Preview
+    function closePreview() {
+        document.getElementById('imageModal').style.display = "none";
+    }
+</script>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <div>
+                                                <h5 class="mb-2">Badminton(Kongu Trophy)</h5>
+                                                <p class="mb-0">KEC|Erode</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-sm-center">
+                                        <p>your kindness can make a huge difference!like this  
+                                        
+                                            I won 4th place in the Kongu Trophy in badminton, a sport that demands speed, agility, and strategy. Badminton enhances endurance, reflexes, and mental focus. Every match is a challenge, pushing me to improve and achieve more. Passion and dedication drive success in this fast-paced game! 🏸
+                                        </p>
+                                        <i class="fas fa-star text-primary">Zoom to preview</i>
+
+                                    </div>
+                                </div>
+                                
+                               
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Testimonial End -->
+
+
+        <!-- Contact Start -->
+        <div class="container-fluid" id="pigraContact">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-lg-3">
+                        <div class="contact-header h-100 bg-dark pt-6 pe-6 pb-6">
+                            <div class="text-start d-flex flex-column justify-content-center wow fadeInUp" data-wow-delay="0.1s">
+                                <h1 class="display-6 text-white mb-0">Contact Me</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                       <div class="contact-content h-100 pt-6 ps-6 pb-6">
+                            <div class="bg-light p-4">
+                                <div class="row g-5">
+                                    <div class="col-xl-5 wow fadeInUp" data-wow-delay="0.1s">
+                                        <h4 class="mb-4">CREDENTIALS</h4>
+                                        <div class="d-flex mb-4">
+                                            <div class="btn-xl-square bg-primary text-white me-3">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Address</h4>
+                                                <p class="mb-0">6/690,Gandhinagar Ganeshapuram,<br>Coimbatore</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex mb-4">
+                                            <div class="btn-xl-square bg-primary text-white me-3">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div>
+                                                <h4> Mail </h4>
+                                                <p class="mb-0"> dhivyaprakash192
+                                                    @gmail.com</p>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white me-3">
+                                                <i class="fa fa-phone-alt"></i>
+                                            </div>
+                                            <div>
+                                                <h4>Telephone</h4>
+                                                <p class="mb-0">+91 96002 38224</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-7 wow fadeInUp" data-wow-delay="0.3s">
+                                        <div>
+                                            <form id="contact-form">
+                                                <div class="row g-3">
+                                                    <div class="col-lg-12 col-xl-6">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control border-0" id="name" placeholder="Your Name" required>
+                                                            <label for="name">Your Name</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-xl-6">
+                                                        <div class="form-floating">
+                                                            <input type="email" class="form-control border-0" id="email" placeholder="Your Email" required>
+                                                            <label for="email">Your Email</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-xl-6">
+                                                        <div class="form-floating">
+                                                            <input type="tel" class="form-control border-0" id="phone" placeholder="Phone">
+                                                            <label for="phone">Your Phone</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-floating">
+                                                            <input type="text" class="form-control border-0" id="subject" placeholder="Subject" required>
+                                                            <label for="subject">Subject</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <div class="form-floating">
+                                                            <textarea class="form-control border-0" placeholder="Leave a message here" id="message" style="height: 120px" required></textarea>
+                                                            <label for="message">Message</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-12">
+                                                        <button type="submit" class="btn btn-primary w-100 py-3">Send Message</button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script>
+  (function() {
+      emailjs.init("bKgm_ipSLLvWbCE9-"); // Replace with your EmailJS User ID
+  })();
+
+  document.getElementById("contact-form").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      emailjs.send("service_bbnz8ar", "template_tii8w18", {
+          name: document.getElementById("name").value,
+          email: document.getElementById("email").value,
+          phone: document.getElementById("phone").value,
+          subject: document.getElementById("subject").value,
+          message: document.getElementById("message").value
+      }).then(function(response) {
+          alert("Message sent successfully!");
+          document.getElementById("contact-form").reset();
+      }, function(error) {
+          alert("Failed to send message. Please try again.");
+      });
+  });
+</script>
+
+                                    <div class="col-12 wow fadeInUp" data-wow-delay="0.5s">
+                                        <div class="rounded">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d70675.27980466414!2d76.91202078816208!3d11.297475534965606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8ee9623c506a5%3A0x3162d68da8ba75f5!2sMettupalayam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1741348364250!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact End -->
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid footer bg-dark border-bottom-0">
+            <div class="container wow fadeIn" data-wow-delay="0.1s">
+                <div class="row g-0">
+                    <div class="col-12">
+                       <div class="footer-content h-100 pt-6 ps-6 pb-6">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-12 text-center">
+                                    <div class="d-flex justify-content-center">
+                                            <a class="btn btn-primary btn-sm-square me-3" href="https://github.com/Dhivyaprakash-19"><i class="fab fa-github text-white"></i></a>
+                                            <a class="btn btn-primary btn-sm-square me-3" href="https://www.linkedin.com/in/dhivya-prakash-2b6399259/"><i class="fab fa-linkedin-in text-white"></i></a>
+                                            <a class="btn btn-primary btn-sm-square me-3" href="https://leetcode.com/u/dhivyaprakash192/"><i class="fas fa-code text-white"></i></a>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-body me-2"></i>PORTFOLIO</a>, All right reserved.</span>
+                                </div>
+                               
+                            </div>
+                       </div>        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-lg-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+        <!-- JavaScript Libraries -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/lightbox/js/lightbox.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>
