@@ -53,7 +53,7 @@
         </div>
         <!-- Navbar End -->
 
-        <!-- Header End -->
+    
 
 
         <!-- About Start -->
@@ -89,20 +89,20 @@
                                 
                                         let speed = isDeleting ? 50 : 100; // Typing speed
                                         if (!isDeleting && charIndex === currentText.length) {
-                                            speed = 1500; // Pause before deleting
+                                            speed = 1500; 
                                             isDeleting = true;
                                         } else if (isDeleting && charIndex === 0) {
                                             isDeleting = false;
-                                            textIndex = (textIndex + 1) % texts.length; // Loop through texts
-                                            speed = 500; // Pause before typing next text
+                                            textIndex = (textIndex + 1) % texts.length; 
+                                            speed = 500; 
                                         }
                                 
                                         setTimeout(typeEffect, speed);
                                     }
                                 
-                                    typeEffect(); // Start typing effect
+                                    typeEffect(); 
                                 </script>
-                                                            </div>
+                            </div>
                         </div>
                     </div>
                     <div class="col-12 col-lg-9">
@@ -116,7 +116,7 @@
                                             <a class="btn btn-primary btn-sm-square mb-3" href="https://leetcode.com/u/dhivyaprakash192/" target="_blank">
                                                 <i class="fas fa-code text-white"></i>
                                             </a>
-                                                                                        <a class="btn btn-primary btn-sm-square mb-0" href="https://www.linkedin.com/in/dhivya-prakash-2b6399259/"><i class="fab fa-linkedin-in text-white"></i></a>
+                                            <a class="btn btn-primary btn-sm-square mb-0" href="https://www.linkedin.com/in/dhivya-prakash-2b6399259/"><i class="fab fa-linkedin-in text-white"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -129,7 +129,8 @@
                                             <p><strong class="fw-bold text-dark">Phone :</strong>   +91 96002 38224</p>
                                             <p class="mb-0"><strong class="fw-bold text-dark">Address :</strong>
                                                 6/690,Gandhinagar
-                                                Ganeshapuram,Coimbatore</p>
+                                                Ganeshapuram,Coimbatore
+                                            </p>
                                         </div>
                                         <div class="col-6">
                                             <p><strong class="fw-bold text-dark">Nationality :</strong> 
@@ -186,13 +187,13 @@
                                 <style>
                                     /* Initial state of education item */
                                     .education-item {
-                                        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+                                        transition: transform 0.3s ease, box-shadow 0.3s ease; 
                                     }
                                 
-                                    /* Enlarge and add shadow effect on hover */
+                                
                                     .education-item:hover {
-                                        transform: scale(1.05); /* Slightly enlarge by 5% */
-                                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Add shadow to make the effect stand out */
+                                        transform: scale(1.05); 
+                                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
                                     }
                                 </style>
                                 
